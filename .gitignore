@@ -39,6 +39,7 @@
 # *.iml
 # *.ipr
 
+*.db
 # CMake
 cmake-build-*/
 
@@ -84,6 +85,8 @@ fabric.properties
 modules.xml
 .idea/misc.xml
 *.ipr
+
+*.db
 
 # Sonarlint plugin
 .idea/sonarlint

@@ -245,39 +245,6 @@
           </component>
         </children>
       </grid>
-      <grid id="7d0ae" binding="comprehensiveform" layout-manager="GridBagLayout">
-        <constraints>
-          <card name="Card1"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="4a22e" class="javax.swing.JLabel" binding="lblCompName">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="16"/>
-              </grid>
-              <gridbag weightx="1.0" weighty="1.0"/>
-            </constraints>
-            <properties>
-              <horizontalAlignment value="10"/>
-              <text value="Label"/>
-            </properties>
-          </component>
-          <component id="72cc3" class="javax.swing.JTextField" binding="txtCompName">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="382" height="30"/>
-              </grid>
-              <gridbag weightx="4.0" weighty="1.0"/>
-            </constraints>
-            <properties>
-              <horizontalAlignment value="10"/>
-              <preferredSize width="200" height="30"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
     </children>
   </grid>
 </form>

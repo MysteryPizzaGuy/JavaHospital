@@ -43,9 +43,6 @@ public class MainForm {
     private JTextArea txtaBriefStatement;
     private JButton btnPatientsReturnToMenu;
     private JButton btnMiniFormReturn;
-    private JPanel comprehensiveform;
-    private JTextField txtCompName;
-    private JLabel lblCompName;
 
     public MainForm() {
         $$$setupUI$$$();
@@ -358,7 +355,7 @@ public class MainForm {
         pnlMainForm.add(comprehensiveform, "Card1");
         lblCompName = new JLabel();
         lblCompName.setHorizontalAlignment(10);
-        lblCompName.setText("Name");
+        lblCompName.setText("Label");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -375,7 +372,6 @@ public class MainForm {
         gbc.weightx = 4.0;
         gbc.weighty = 1.0;
         comprehensiveform.add(txtCompName, gbc);
-
     }
 
     /**
