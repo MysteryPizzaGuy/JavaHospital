@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlite:E:/Visual Studio/JAVA1Project/Database/database.db</property>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.SQLiteDialect
+        </property>
+        <mapping class="com.smiletic.JavaHospital.DAO.AddressEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.AreaEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.BloodtypeEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.CityEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.ContactdetailsEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.DiabetictypeEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.FoodtypeEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.MaritalstatusEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.PersonEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.PincodeEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.SexEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.StateEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.StreetEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
