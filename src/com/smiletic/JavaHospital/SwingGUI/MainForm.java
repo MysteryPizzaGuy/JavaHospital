@@ -350,28 +350,7 @@ public class MainForm {
         gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelmain.add(btnMiniFormReturn, gbc);
-        comprehensiveform = new JPanel();
-        comprehensiveform.setLayout(new GridBagLayout());
-        pnlMainForm.add(comprehensiveform, "Card1");
-        lblCompName = new JLabel();
-        lblCompName.setHorizontalAlignment(10);
-        lblCompName.setText("Label");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.anchor = GridBagConstraints.WEST;
-        comprehensiveform.add(lblCompName, gbc);
-        txtCompName = new JTextField();
-        txtCompName.setHorizontalAlignment(10);
-        txtCompName.setPreferredSize(new Dimension(200, 30));
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.weightx = 4.0;
-        gbc.weighty = 1.0;
-        comprehensiveform.add(txtCompName, gbc);
+
     }
 
     /**
