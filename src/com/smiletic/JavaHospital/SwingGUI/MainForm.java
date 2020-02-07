@@ -43,6 +43,8 @@ public class MainForm {
     private JTextArea txtaBriefStatement;
     private JButton btnPatientsReturnToMenu;
     private JButton btnMiniFormReturn;
+    private JButton btnDoctorCRUD;
+    private JButton btnAppointment;
 
     public MainForm() {
         $$$setupUI$$$();
@@ -61,6 +63,16 @@ public class MainForm {
 
             }
         });
+        btnDoctorCRUD.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    new DoctorCRUD().main(new String[]{});
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
         btnPatientsReturnToMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -71,6 +83,16 @@ public class MainForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 switchCardWindow("menu");
+            }
+        });
+        btnAppointment.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    AppointmentManager.main(new String[]{});
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
         List<SexEntity> sexes = DataProvider.getListofAllEntities(SexEntity.class);
@@ -161,23 +183,37 @@ public class MainForm {
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 0;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         pnlMenu.add(btnMiniInput, gbc);
         btnPatientList = new JButton();
         btnPatientList.setText("Patient Form");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy = 3;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         pnlMenu.add(btnPatientList, gbc);
         btnExit = new JButton();
         btnExit.setText("Exit");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 2;
+        gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         pnlMenu.add(btnExit, gbc);
+        btnDoctorCRUD = new JButton();
+        btnDoctorCRUD.setText("Doctor Crud");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        pnlMenu.add(btnDoctorCRUD, gbc);
+        btnAppointment = new JButton();
+        btnAppointment.setText("Appointment");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        pnlMenu.add(btnAppointment, gbc);
         pnlPatientList = new JPanel();
         pnlPatientList.setLayout(new BorderLayout(0, 0));
         pnlMainForm.add(pnlPatientList, "patients");
@@ -350,7 +386,6 @@ public class MainForm {
         gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelmain.add(btnMiniFormReturn, gbc);
-
     }
 
     /**

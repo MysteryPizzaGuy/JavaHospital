@@ -2,6 +2,7 @@ package com.smiletic.JavaHospital.DAO;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "PERSON", schema = "main", catalog = "")
@@ -49,6 +50,7 @@ public class PersonEntity {
     private String knownAlergies;
     private String knownReactionToDrugs;
     private String majorSurgeries;
+    private Set<AppointmentEntity> appointments;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,6 +64,11 @@ public class PersonEntity {
         this.idPerson = idPerson;
     }
 
+    @Override
+    public String toString() {
+        return  name;
+    }
+
     @Basic
     @Column(name = "Name")
     public String getName() {
@@ -71,6 +78,18 @@ public class PersonEntity {
     public void setName(String name) {
         this.name = name;
     }
+
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL,mappedBy ="patient")
+
+    public Set<AppointmentEntity> getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(Set<AppointmentEntity> appointments) {
+        this.appointments = appointments;
+    }
+
+
 
     @Basic
     @Column(name = "BriefStatement")

@@ -22,6 +22,10 @@
         <mapping class="com.smiletic.JavaHospital.DAO.SexEntity"/>
         <mapping class="com.smiletic.JavaHospital.DAO.StateEntity"/>
         <mapping class="com.smiletic.JavaHospital.DAO.StreetEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.AvailabilityEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.DoctorEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.SpecializationEntity"/>
+        <mapping class="com.smiletic.JavaHospital.DAO.AppointmentEntity"/>
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 
