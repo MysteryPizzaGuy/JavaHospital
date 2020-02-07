@@ -127,6 +127,59 @@ CREATE TABLE PERSON(
 	foreign key(DiabeticTypeID) references DIABETICTYPE(IDDiabeticType)
 );
 
+CREATE TABLE SPECIALIZATION(
+	IDSpecialization integer primary key,
+	Title text,
+	Desciption text
+	
+
+);
+
+
+CREATE TABLE DOCTOR(
+	IDDoctor integer primary key,
+	Name text,
+	SpecializationID integer,
+	FOREIGN KEY (SpecializationID) REFERENCES Specialization(IDSpecialization)
+
+	
+);
+
+CREATE TABLE AVAILABILITY(
+	IDAvailability integer primary key,
+	DoctorID integer,
+	fromDate date,
+	toDate date,
+	fromTime time,
+	toTime time,
+	FOREIGN KEY (DoctorID) REFERENCES DOCTOR(IDDoctor)
+);
+
+CREATE TABLE APPOINTMENT(
+	IDAppointment integer primary key,
+	DoctorID integer,
+	PatientID integer,
+	fromDate datetime,
+	toDate datetime,
+	FOREIGN KEY (DoctorID) REFERENCES DOCTOR(IDDoctor),
+	FOREIGN KEY (PatientID) REFERENCES PERSON(IDPerson)
+
+);
+
+INSERT INTO APPOINTMENT VALUES(null,1,1,'2020-1-21 08:00','2020-1-21 13:00');
+
+
+
+INSERT INTO SPECIALIZATION VALUES(null,'Kardiolog','Srce');
+INSERT INTO SPECIALIZATION VALUES(null,'Otorinolaringolog','Uho Grlo Nos');
+INSERT INTO SPECIALIZATION VALUES(null,'Okulist','Oko');
+
+INSERT INTO DOCTOR VALUES (null,'Miroslav Skoro',1)
+
+INSERT INTO AVAILABILITY VALUES(null,1,'2020-1-21','2020-2-20','08:00','18:00')
+
+
+
 
 
 INSERT INTO [STATE] VALUES(null,'State1');
@@ -193,5 +246,5 @@ INSERT INTO DIABETICTYPE VALUES(null,'Type 2');
 INSERT INTO SEX VALUES(null,'Male');
 INSERT INTO SEX VALUES(null,'Female');
 
-Insert into PERSON VALUES(null,'Mate Miso','Brief STATEMENT1',1,'1978-01-01',1,1,'Kreso Miso','Sin',1,1,2,170,120,1,'Pjevac',124567,'no','no',0,'yes',0,'no',null,2,1,'yes',1,'Broken Arm','Haso','NYC','no',null,'no','no','no','no','no','no','no','no','no','None');
+Insert into PERSON VALUES(null,'Mate Miso','Brief STATEMENT1',1,'1978-1-1',1,1,'Kreso Miso','Sin',1,1,2,170,120,1,'Pjevac',124567,'no','no',0,'yes',0,'no',null,2,1,'yes',1,'Broken Arm','Haso','NYC','no',null,'no','no','no','no','no','no','no','no','no','None');
 
