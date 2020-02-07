@@ -166,7 +166,6 @@ CREATE TABLE APPOINTMENT(
 
 );
 
-INSERT INTO APPOINTMENT VALUES(null,1,1,'2020-1-21 08:00','2020-1-21 13:00');
 
 
 
@@ -174,9 +173,9 @@ INSERT INTO SPECIALIZATION VALUES(null,'Kardiolog','Srce');
 INSERT INTO SPECIALIZATION VALUES(null,'Otorinolaringolog','Uho Grlo Nos');
 INSERT INTO SPECIALIZATION VALUES(null,'Okulist','Oko');
 
-INSERT INTO DOCTOR VALUES (null,'Miroslav Skoro',1)
+INSERT INTO DOCTOR VALUES (null,'Miroslav Skoro',1);
 
-INSERT INTO AVAILABILITY VALUES(null,1,'2020-1-21','2020-2-20','08:00','18:00')
+INSERT INTO AVAILABILITY VALUES(null,1,'2020-1-21','2020-2-20','08:00','18:00');
 
 
 
@@ -247,4 +246,5 @@ INSERT INTO SEX VALUES(null,'Male');
 INSERT INTO SEX VALUES(null,'Female');
 
 Insert into PERSON VALUES(null,'Mate Miso','Brief STATEMENT1',1,'1978-1-1',1,1,'Kreso Miso','Sin',1,1,2,170,120,1,'Pjevac',124567,'no','no',0,'yes',0,'no',null,2,1,'yes',1,'Broken Arm','Haso','NYC','no',null,'no','no','no','no','no','no','no','no','no','None');
+INSERT INTO APPOINTMENT VALUES(null,1,1,'2020-1-21 08:00','2020-1-21 13:00');
 
